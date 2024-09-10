@@ -1,0 +1,2 @@
+bID_mID_oID,priviledged_flow,object_type,entity_path,read_relation_type,write_relation_type,write_argv,read_argv
+17_9300560_90017,1,file,"/var/lib/docker/overlay2/f56fa8a207fbd337d1e5cc4f829e1b272c863354a98119412d7aac49a3c7314f/diff/cmd_8pMeO,/cmd_8pMeO","open,perm_check,read",write,"./cdk,run,mount-procfs,/mnt/host_proc,echo this_is_container > /tmp/my_host_file","./cdk,run,mount-procfs,/mnt/host_proc,echo this_is_container > /tmp/my_host_file,/var/lib/docker/overlay2/f56fa8a207fbd337d1e5cc4f829e1b272c863354a98119412d7aac49a3c7314f/merged/cmd_8pMeO,/bin/sh"
