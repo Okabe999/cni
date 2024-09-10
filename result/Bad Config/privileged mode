@@ -1,0 +1,4 @@
+bID_mID_oID,priviledged_flow,object_type,entity_path,read_relation_type,write_relation_type,write_argv,read_argv
+15_9300560_71092,1,file,/tmp/host_file,"getattr,perm_check,read,open",write,"/bin/sh,-c,echo container_did_this > /host/tmp/host_file","/bin/sh,-c,echo container_did_this > /host/tmp/host_file,cat,/tmp/host_file"
+15_9300560_80738,0,pipe,/runc/45d1b52b69eaea719a13e1ea14cafb7aebb382d92b071960a8d373bc57df6258/exec.fifo,,,"docker-runc,start,45d1b52b69eaea719a13e1ea14cafb7aebb382d92b071960a8d373bc57df6258","docker-runc,start,45d1b52b69eaea719a13e1ea14cafb7aebb382d92b071960a8d373bc57df6258"
+15_9300560_80924,0,process_memory,/usr/bin/docker-runc,,,,
