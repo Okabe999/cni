@@ -13,12 +13,12 @@
 3. go version：go1.21.0 linux/amd64
 4. gcc version： 9.4.0
 
-
 若有学习需求，需先安装k8s集群，安装k8s集群可以参考这篇文章https://zhuanlan.zhihu.com/p/654320979
+需要准备至少两台虚拟机，一台master、一台node。
 
-vim `/etc/docker/daemon.json`若阿里云的源不好用，可以使用dockerpull.com提供的方法。
+在准备k8s环境的时候，若vim `/etc/docker/daemon.json`时阿里云的源不好用，可以使用dockerpull.com提供的方法。
 
 ### 运行步骤
-**日志准备**。
-1.使用Camflow系统捕获日志文件（在Ubuntu上安装Camflow系统可以参考此网址https://camflow.org/#package，安装需要编译linux内核模块，可能比较耗时）。
-确保当前文件夹内存在以规范命名的Camflow的日志log文件，例如44_577844575_276576.log,
+**1.日志准备**。
+使用Camflow系统捕获日志文件（在Ubuntu上安装Camflow系统可以参考此网址https://camflow.org/#package，安装需要编译linux内核模块，可能比较耗时）。确保当前文件夹内存在以规范命名的Camflow的日志log文件，例如44_577844575_276576.log,
+**2.代码运行**。
