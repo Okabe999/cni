@@ -13,8 +13,7 @@
 3. go version：go1.21.0 linux/amd64
 4. gcc version： 9.4.0
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/ccaacad4-ec36-4d9a-9182-238ca30ae37e/1fb012c7-b4ae-4ffb-bb11-6c33d28a6710/Untitled.png)
 
-安装k8s集群可以参考这篇文章https://zhuanlan.zhihu.com/p/654320979
+若有学习需求，需先安装k8s集群，安装k8s集群可以参考这篇文章https://zhuanlan.zhihu.com/p/654320979
 
 vim `/etc/docker/daemon.json`若阿里云的源不好用，可以使用dockerpull.com提供的方法。
