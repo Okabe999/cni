@@ -20,7 +20,7 @@
 
 ### 运行步骤
 **1.日志准备**。
-使用Camflow系统捕获日志文件,在Ubuntu上安装Camflow系统可以参考此网址[camflow](https://camflow.org/#package) 
-安装需要编译linux内核模块，可能比较耗时。
+使用Camflow系统捕获日志文件,在Ubuntu上安装Camflow系统可以参考此网址[camflow](https://camflow.org/#package)   
+安装需要编译linux内核模块，可能比较耗时。  
 另外确保当前文件夹内存在以规范命名的Camflow的日志log文件，例如44_577844575_276576.log,
 **2.代码运行**。
