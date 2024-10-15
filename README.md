@@ -8,13 +8,13 @@
 
 ### 集群环境
 
-1. 集群环境：ubuntu20.04 虚拟机
+1. 集群环境：ubuntu20.04 
 2. k8s version：v1.23.0
 3. go version：go1.21.0 linux/amd64
 4. gcc version： 9.4.0
 
 若有学习需求，需先安装k8s集群，安装k8s集群可以参考这篇文章https://zhuanlan.zhihu.com/p/654320979
-需要准备至少两台虚拟机，一台master、一台node。
+需要准备至少两台主机，一台master、一台node。
 
 在准备k8s环境的时候，若vim `/etc/docker/daemon.json`时阿里云的源不好用，可以使用[dockerpull.com](dockerpull.com)提供的方法。
 
