@@ -64,6 +64,8 @@ spec:
           - "36000"
         imagePullPolicy: IfNotPresent
 ```
+**4.验证结果**
+
 在master节点上使用kubectl apply -f ../simple-k8s-cni-1/busybox.yaml(此处为busybox.yaml的文件路径)，便可创建三个测试pod  
 在master节点上kubectl apply成功之后，便可切换到node1、node2中，使用ls查看是否存在feature.csv文件
 
