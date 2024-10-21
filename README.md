@@ -38,7 +38,9 @@ kubectl apply -f deploy/mycni.yaml
 在master节点上，使用scp命令将extra文件夹里的代码复制到在node1、node2节点上，例如scp XXX root@ding-net-node-1:/root
 然后就可以测试apply pod了  
 **3.测试pod**
-以下是一段测试pod，文件名为busybox：
+
+以下是一段测试pod，文件名为busybox：  
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -61,8 +63,5 @@ spec:
           - sleep
           - "36000"
         imagePullPolicy: IfNotPresent
-
-
-
-
+在master节点上使用kubectl apply -f ../simple-k8s-cni-1/busybox.yaml(此处为busybox.yaml的文件路径)，便可创建三个测试pod。
 
