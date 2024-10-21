@@ -26,9 +26,42 @@
 另外确保当前文件夹内存在以规范命名的Camflow的日志log文件，例如44_577844575_276576.log。    
 
 **2.代码运行**
+git clone https://github.com/Okabe999/cni.git
 运行代码需要准备如下文件：  
 1.CamFlow系统捕获的log日志，命名规范为44_577844575_276576.log  
-2.jsonpath.txt文件，该文件的内容应存放log日志文件的路径+名称，例如，若44_577844575_276576.log和jsonpath.txt在同一目录结构下，44_577844575_276576.log的文件路径便可省略
+2.jsonpath.txt文件，该文件的内容应存放log日志文件的路径+名称，例如，若44_577844575_276576.log和jsonpath.txt在同一目录结构下，44_577844575_276576.log的文件路径便可省略，不然应保存完整绝对路径，例如/root/extra/44_577844575_276576.log  
+3.在k8s环境下，假设存在master、node1、node2三台主机。
+在master节点上的simple-k8s-cni目录下运行以下命令
+make docker-build  
+make kind-image-load  
+kubectl apply -f deploy/mycni.yaml  
+在node1、node2节点上，确保其有extra文件夹里的代码，使用scp命令，例如scp XXX root@ding-net-node-1:/root
+然后就可以测试apply pod了  
+**3.测试pod**
+以下是一段测试pod，文件名为busybox：
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox
+spec:
+  selector:
+    matchLabels:
+      app: busybox
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: busybox
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command:
+          - sleep
+          - "36000"
+        imagePullPolicy: IfNotPresent
+
+
 
 
 
